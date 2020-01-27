@@ -1,2 +1,2 @@
 # JavaFSD
-JavaFSD Assignments
+Java Full Stack Developer Training tutorials and assignments
