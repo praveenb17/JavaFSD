@@ -1,33 +1,40 @@
-//assignment
 class MyStringSplit{
 	
 	public static void main(String[] args) {
 		String a = " This is mySplit Program";
 
-		String[] s =new MyStringSplit().mySplit(a," ");
+		String[] s =new MyStringSplit().MySplit(a," ");
 	}
 
-		public String[] mySplit(String a, String b)
-		{ 
-			int j = 0, k = 0;
-		  for(int i = 0; i < a.length(); i++)
-		  {
-		  	if(a[i] == b[0]){
-		  	for(int s = 0, t = i; s < b.length();t++, s++)
-		  	{
-		  		if(b[s] == a[t])
-		  	}
-		  		s[k] =a.substring(j,i-1);
-		  		j = i+b.length();
-		  		k++;
+	public String[] MySplit(String a, String b)
+	{
+		int j = 0, k = 0, l = 0; //for loops
+		int n = b.length();
+		int m = a.length();
+		String[] s = {};
+		int count = 0;
+		for(j = 0; j < m; j++)
+		{
+			if(a.charAt(j) == b.charAt(0))
+			{
+				for(k = j; k < j+n; k++)
+				{
+					if(a.charAt(k) == b.charAt(k))
+						count++;
+				}
+				
+			}
 
-		  	}
-		  }
-		  return s;
+			if(count == b.length())
+					{
+						s[l] = a.substring(j,j+n);
+						count = 0;
+						l++;
+						j = j+n;
+					}
 		}
 
-		for(int i = 0; i< k+1 ; i++)
-			System.out.println(s[i]);
-	
-		}
+
+		return s;
+	}
 }
