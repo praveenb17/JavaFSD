@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- Create the bean for AnnotationEngineer -->
+
+	<bean class="com.ibm.training.AnnotationEngineer" id="aE">
+	
+	</bean>
+	
+	
+	<!-- Create the bean for Address -->
+	 <bean class="com.ibm.training.Address" id="theAddress2">
+		<property name="location" value="Pune"></property>
+		<property name="pinCode" value="332210"></property>
+	</bean> 
+	
+	<bean class="com.ibm.training.Address" id="theAddress3">
+		<property name="location" value="Bangalore"></property>
+		<property name="pinCode" value="560045"></property>
+	</bean>
+	
+	
+	<!-- For annotations to work -->
+	<context:annotation-config></context:annotation-config>
+	
+	<!-- For scanning all the Components -->
+	<context:component-scan base-package="com.ibm.training"></context:component-scan>
+	
+	
+</beans>
+
+
+<!--  end of file -->
